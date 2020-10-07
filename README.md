@@ -41,6 +41,12 @@ Anpassung der buildout.cfg nach git clone
 
 Referenzsysteme
 ---------------
+
+Basic-Auth für alle Referenzsysteme:
+
+Benutzername: plone
+Passwort: uvc
+
 Die Plone-Referenzsysteme werden auf dem folgendem Server bei der BG-Verkehr gehostet: 10.33.204.103
 
 /home/siguv:
