@@ -43,11 +43,17 @@ Referenzsysteme
 ---------------
 Die Plone-Referenzsysteme werden auf dem folgendem Server bei der BG-Verkehr gehostet: 10.33.204.103
 
+/home/siguv:
+
+* plone52_max = maximale Konfig (plonetheme.siguv)
+* plone52_min = minimale Konfig (plonetheme.tokyo)
+* plone52_dev = Development (plonetheme.siguv + jeweils neue Plone-Version)
+
 Ports:
 
 * 8080 = maximale Konfig (plonetheme.siguv)
 * 8090 = minimale Konfig (plonetheme.tokyo)
-* 8070 = Development (plonetheme.siguv + jeweils neue Plone-Version)* 
+* 8070 = Development (plonetheme.siguv + jeweils neue Plone-Version) 
 
 Externe URLs:
 
