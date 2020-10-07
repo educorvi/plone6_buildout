@@ -38,3 +38,19 @@ Anpassung der buildout.cfg nach git clone
 * user=admin:admin
 * buildout-user = teamweb
 * Portnummern der Clients
+
+Referenzsysteme
+---------------
+Die Plone-Referenzsysteme werden auf dem folgendem Server bei der BG-Verkehr gehostet: 10.33.204.103
+
+Ports:
+
+* 8080 = maximale Konfig (plonetheme.siguv)
+* 8090 = minimale Konfig (plonetheme.tokyo)
+* 8070 = Development (plonetheme.siguv + jeweils neue Plone-Version)* 
+
+Externe URLs:
+
+* plone.bg-kooperation.de = maximale Konfig (aktuelle Referenz-Konfiguration)
+* plone-min.bg-kooperation.de = minimale Plone-Konfiguration (plonetheme.tokyo)
+* plone-dev.bg-kooperation.de = maximale Konfig + neue Plone-Version
