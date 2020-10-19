@@ -66,3 +66,15 @@ Externe URLs:
 * plone.bg-kooperation.de = maximale Konfig (aktuelle Referenz-Konfiguration)
 * plone-min.bg-kooperation.de = minimale Plone-Konfiguration (plonetheme.tokyo)
 * plone-dev.bg-kooperation.de = maximale Konfig + neue Plone-Version
+
+Ansprechpartner
+---------------
+- Lars Walther (lwalther@novareto.de)
+- Miriam Dünnwald (duennwald.miriam@bgetem.de)
+
+- fachlich: Holger Zingsheim (BG ETEM)
+
+Maintainer
+----------
+
+- Miriam Dünnwald (duennwald.miriam@bgetem.de)
