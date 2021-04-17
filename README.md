@@ -11,7 +11,7 @@ Vorbereitung des Ubuntu-Systems
 * sudo apt-get install build-essential python-dev libjpeg-dev libxslt-dev supervisor
 * sudo apt-get install libpython3-dev
 * sudo apt-get install python3-pip
-* sudo apt-get install mongodb
+* (Optional) sudo apt-get install mongodb
 
 Binaries zum Indexieren von Content
 -----------------------------------
@@ -22,7 +22,7 @@ Binaries zum Indexieren von Content
 Vorbereitung und Durchführung des Plone-Buildouts
 -------------------------------------------------
 
-* ~ > git clone https://github.com/novareto/plone52_buildout.git $projectname
+* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone52_buildout.git $projectname
 * ~ > cd $projectname
 * ~/$projectname > python3 -m venv .
 * ~/$projectname > ./bin/pip install -r requirements.txt
@@ -36,8 +36,9 @@ Anpassung der buildout.cfg nach git clone
 -----------------------------------------
 
 * user=admin:admin
-* buildout-user = teamweb
 * Portnummern der Clients
+* Portnummer des ZEO-Servers
+* shared-blob --> bei 2. Server ohne lokale Datenbank shared-blob = off
 
 Referenzsysteme
 ---------------
