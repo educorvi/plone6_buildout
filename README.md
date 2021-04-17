@@ -10,7 +10,8 @@ Vorbereitung des Ubuntu-Systems
 
 * sudo apt-get install build-essential python-dev libjpeg-dev libxslt-dev supervisor
 * sudo apt-get install libpython3-dev
-* sudo apt-get install python3-pip
+* sudo apt-get install python3-pip python3-venv
+* sudo apt-get install libssl-dev
 * (Optional) sudo apt-get install mongodb
 
 Binaries zum Indexieren von Content
