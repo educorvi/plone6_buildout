@@ -12,6 +12,7 @@ Vorbereitung des Ubuntu-Systems
 * sudo apt-get install libpython3-dev
 * sudo apt-get install python3-pip python3-venv
 * sudo apt-get install libssl-dev
+* sudo apt-get install libsasl2-dev libldap2-dev
 * (Optional) sudo apt-get install mongodb
 
 Binaries zum Indexieren von Content
