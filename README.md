@@ -8,11 +8,13 @@ Installation
 Vorbereitung des Ubuntu-Systems
 -------------------------------
 
-* sudo apt-get install build-essential python-dev libjpeg-dev libxslt-dev supervisor
+* sudo apt-get install build-essential python-dev libjpeg-dev libxslt-dev supervisor git
 * sudo apt-get install libpython3-dev
 * sudo apt-get install python3-pip python3-venv
-* sudo apt-get install libssl-dev
+* sudo apt-get install libssl-dev libffi-dev
+* sudo apt-get install libsasl2-dev libldap2-dev
 * (Optional) sudo apt-get install mongodb
+* (Optional) sudo apt-get install libpango-1.0-0 gir1.2-pangoft2-1.0
 
 Binaries zum Indexieren von Content
 -----------------------------------
