@@ -8,7 +8,7 @@ Installation
 Vorbereitung des Ubuntu-Systems
 -------------------------------
 
-* sudo apt-get install build-essential python-dev libjpeg-dev libxslt-dev supervisor git
+* sudo apt-get install build-essential python-dev-is-python3 libjpeg-dev libxslt-dev supervisor git
 * sudo apt-get install libpython3-dev
 * sudo apt-get install python3-pip python3-venv
 * sudo apt-get install libssl-dev libffi-dev
@@ -43,6 +43,30 @@ Anpassung der buildout.cfg nach git clone
 * Portnummer des ZEO-Servers
 * shared-blob --> bei 2. Server ohne lokale Datenbank shared-blob = off
 
+Update des Systems auf neue Plone-Versionen
+-------------------------------------------
+
+Der Buildout muss regelmäßig auf neue Versionen der Frameworks Plone und Zope angehoben werden. In diesem Fall muss
+geprüft werden, ob die Version-Pins der SIGUV-Gemeinschaft in der ./profiles/versions.cfg noch mit den Versionen
+kompatibel sind, die frameworkseitig mitgeliefert werden. Um diesen Prozess zu erleichtern kann ein Scriptdatei
+verwendet werden die mit dem Buildout ausgeliefert wird:
+
+~/$projectname > ./bin/python check_versions.py
+
+In der Datei müssen vor Ausführung folgende Änderungen vorgenommen werden:
+
+* ploneversion = '5.2.9'
+* zopeversion = '4.8.2'
+
+Die Ausgabe hat dann etwa folgendes Format:
+
+```
+setuptools: versions.cfg:51.3.3 release-5.2.9-versions.cfg:42.0.2
+importlib-metadata: versions.cfg:5.0.0 release-5.2.9-versions.cfg:0.23
+SecretStorage: versions.cfg:3.3.1 release-5.2.9-versions.cfg:2.3.1
+```
+
+
 Referenzsysteme
 ---------------
 
@@ -74,11 +98,11 @@ Externe URLs:
 Ansprechpartner
 ---------------
 - Lars Walther (lwalther@novareto.de)
-- Miriam Dünnwald (duennwald.miriam@bgetem.de)
-
+- Lucian Dünnwald (duennwald.lucian@bgetem.de)
 - fachlich: Holger Zingsheim (BG ETEM)
 
 Maintainer
 ----------
 
-- Miriam Dünnwald (duennwald.miriam@bgetem.de)
+- Lars Walther (lwalther@novareto.de)
+- Lucian Dünnwald (duennwald.lucian@bgetem.de)
