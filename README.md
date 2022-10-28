@@ -38,9 +38,6 @@ Vorbereitung und Durchführung des Plone-Buildouts
 * ~/$projectname > ./bin/pip install -r requirements.txt
 * ~/$projectname > ./bin/buildout
 
-Buildout mit Developer-Tools
-----------------------------
-* ~/$projectname > ./bin/buildout -c develop.cfg
 
 Anpassung der buildout.cfg nach git clone
 -----------------------------------------
@@ -55,19 +52,39 @@ Buildout für eine bestimmte Plone-Version (ab 5.2.5)
 ====================================================
 
 Der Master- bzw. Main Branch des Buildouts erlaubt die Installation der jeweils aktuellen Plone-Version für
-ein definiertes Zielsystem. Dieses Zielsystem pflegen wir ab sofort in dieser Dokumentation. Für ältere Installationen
-kann es aber durchaus sinnvoll sein, explizite Buildouts älterer Plone-Stable-Releases zu erlauben. Ab Version 5.2.5
-wird dafür in Profiles die Sicherung der versions.cfg in einer versions-${version}.cfg gepflegt. Diese kann dann
-explizit in der Buildout.cfg angegeben werden, also z.B.
+ein definiertes Zielsystem (siehe oben). Für ältere Installationen (Bestand an Portalen)
+kann es aber durchaus sinnvoll sein, explizite Buildouts älterer Plone-Stable-Releases durchzuführen.
+Beginnend mit Version 5.2.5 werden versionsspezifische Kopien aller erforderlichen Dateien im Buildout
+gepflegt. Aktuell sind das folgende Dateien:
+
+* requirements.txt -> requirements-${version}.cfg
+* profiles/versions.cfg -> profiles/versions-${version}.cfg 
+
+Abweichender Installationsablauf
+--------------------------------
+
+* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone52_buildout.git $projectname
+* ~ > cd $projectname
+* ~/$projectname > python3 -m venv .
+* ~/$projectname > ./bin/pip install -r requirements-${version}.txt
+* ~/$projectname > vi buildout.cfg
 
 ```
 [buildout]
 
 extends = 
     profiles/develop.cfg
-    profiles/5.2.5/version.cfg
-    profiles/versions-5.2.5.cfg
+    profiles/${version}/version.cfg
+    profiles/versions-${version}.cfg
 ``` 
+* ~/$projectname > ./bin/buildout
+
+Zielsysteme Version 5.2.5
+-------------------------
+
+- Ubuntu 20.04 LTS
+- Python 3.8.10
+
 
 Update des Systems auf neue Plone-Versionen
 ===========================================
