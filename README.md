@@ -5,6 +5,13 @@ Installationsprozedur für die Plone-Installationen der SIGUV-Kooperation
 Installation
 ============
 
+Aktuelles Zielsystem
+--------------------
+
+- Ubuntu 22.04 LTS
+- Python 3.10.6
+
+
 Vorbereitung des Ubuntu-Systems
 -------------------------------
 
@@ -43,8 +50,27 @@ Anpassung der buildout.cfg nach git clone
 * Portnummer des ZEO-Servers
 * shared-blob --> bei 2. Server ohne lokale Datenbank shared-blob = off
 
+
+Buildout für eine bestimmte Plone-Version (ab 5.2.5)
+====================================================
+
+Der Master- bzw. Main Branch des Buildouts erlaubt die Installation der jeweils aktuellen Plone-Version für
+ein definiertes Zielsystem. Dieses Zielsystem pflegen wir ab sofort in dieser Dokumentation. Für ältere Installationen
+kann es aber durchaus sinnvoll sein, explizite Buildouts älterer Plone-Stable-Releases zu erlauben. Ab Version 5.2.5
+wird dafür in Profiles die Sicherung der versions.cfg in einer versions-${version}.cfg gepflegt. Diese kann dann
+explizit in der Buildout.cfg angegeben werden, also z.B.
+
+```
+[buildout]
+
+extends = 
+    profiles/develop.cfg
+    profiles/5.2.5/version.cfg
+    profiles/versions-5.2.5.cfg
+``` 
+
 Update des Systems auf neue Plone-Versionen
--------------------------------------------
+===========================================
 
 Der Buildout muss regelmäßig auf neue Versionen der Frameworks Plone und Zope angehoben werden. In diesem Fall muss
 geprüft werden, ob die Version-Pins der SIGUV-Gemeinschaft in der ./profiles/versions.cfg noch mit den Versionen
