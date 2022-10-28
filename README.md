@@ -5,8 +5,8 @@ Installationsprozedur für die Plone-Installationen der SIGUV-Kooperation
 Installation
 ============
 
-Aktuelles Zielsystem
---------------------
+Aktuelles Zielsystem für Plone Version 5.2.9
+--------------------------------------------
 
 - Ubuntu 22.04 LTS
 - Python 3.10.6
@@ -79,8 +79,8 @@ extends =
 ``` 
 * ~/$projectname > ./bin/buildout
 
-Zielsysteme Version 5.2.5
--------------------------
+Zielsysteme für Plone Version 5.2.5
+-----------------------------------
 
 - Ubuntu 20.04 LTS
 - Python 3.8.10
