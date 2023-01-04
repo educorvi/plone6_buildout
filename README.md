@@ -14,7 +14,7 @@ Aktuelles Zielsystem für Plone Version 6.0.0
 Vorbereitung des Ubuntu-Systems
 -------------------------------
 
-* sudo apt-get install build-essential python-dev-is-python3 libjpeg-dev libxslt-dev supervisor git
+* sudo apt-get install build-essential python-dev-is-python3 libjpeg-dev libxslt-dev supervisor git tox
 * sudo apt-get install libpython3-dev
 * sudo apt-get install python3-pip python3-venv
 * sudo apt-get install libssl-dev libffi-dev
