@@ -1,16 +1,15 @@
-# plone52_buildout
+# plone6_buildout
 
-Installationsprozedur für die Plone-Installationen der SIGUV-Kooperation
+Installationsprozedur für die Plone-6-Installationen der SIGUV-Kooperation
 
 Installation
 ============
 
-Aktuelles Zielsystem für Plone Version 5.2.9
+Aktuelles Zielsystem für Plone Version 6.0.0
 --------------------------------------------
 
 - Ubuntu 22.04 LTS
 - Python 3.10.6
-
 
 Vorbereitung des Ubuntu-Systems
 -------------------------------
@@ -32,7 +31,7 @@ Binaries zum Indexieren von Content
 Vorbereitung und Durchführung des Plone-Buildouts
 -------------------------------------------------
 
-* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone52_buildout.git $projectname
+* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone6_buildout.git $projectname
 * ~ > cd $projectname
 * ~/$projectname > python3 -m venv .
 * ~/$projectname > ./bin/pip install -r requirements.txt
@@ -48,13 +47,13 @@ Anpassung der buildout.cfg nach git clone
 * shared-blob --> bei 2. Server ohne lokale Datenbank shared-blob = off
 
 
-Buildout für eine bestimmte Plone-Version (ab 5.2.5)
-====================================================
+Buildout für eine bestimmte Plone-Version (6.0.0)
+=================================================
 
-Der Master- bzw. Main Branch des Buildouts erlaubt die Installation der jeweils aktuellen Plone-Version für
+Der Master- bzw. Main Branch des Buildouts erlaubt die Installation der jeweils aktuellen Plone6-Version für
 ein definiertes Zielsystem (siehe oben). Für ältere Installationen (Bestand an Portalen)
 kann es aber durchaus sinnvoll sein, explizite Buildouts älterer Plone-Stable-Releases durchzuführen.
-Beginnend mit Version 5.2.5 werden versionsspezifische Kopien aller erforderlichen Dateien im Buildout
+Beginnend mit Version 6.0.0 werden versionsspezifische Kopien aller erforderlichen Dateien im Buildout
 gepflegt. Aktuell sind das folgende Dateien:
 
 * requirements.txt -> requirements-${version}.cfg
@@ -63,7 +62,7 @@ gepflegt. Aktuell sind das folgende Dateien:
 Abweichender Installationsablauf
 --------------------------------
 
-* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone52_buildout.git $projectname
+* ~ > git clone https://git.bg-kooperation.de/uvcplone/plone6_buildout.git $projectname
 * ~ > cd $projectname
 * ~/$projectname > python3 -m venv .
 * ~/$projectname > ./bin/pip install -r requirements-${version}.txt
@@ -79,12 +78,11 @@ extends =
 ``` 
 * ~/$projectname > ./bin/buildout
 
-Zielsysteme für Plone Version 5.2.5
+Zielsysteme für Plone Version 6.0.0
 -----------------------------------
 
-- Ubuntu 20.04 LTS
-- Python 3.8.10
-
+- Ubuntu 22.04 LTS
+- Python 3.10.6
 
 Update des Systems auf neue Plone-Versionen
 ===========================================
@@ -98,8 +96,8 @@ verwendet werden die mit dem Buildout ausgeliefert wird:
 
 In der Datei müssen vor Ausführung folgende Änderungen vorgenommen werden:
 
-* ploneversion = '5.2.9'
-* zopeversion = '4.8.2'
+* ploneversion = 'x.x.x'
+* zopeversion = 'x.x.x'
 
 Die Ausgabe hat dann etwa folgendes Format:
 
@@ -109,43 +107,18 @@ importlib-metadata: versions.cfg:5.0.0 release-5.2.9-versions.cfg:0.23
 SecretStorage: versions.cfg:3.3.1 release-5.2.9-versions.cfg:2.3.1
 ```
 
+Screenshot
+----------
 
-Referenzsysteme
----------------
+![Screenshot Plone-6 Classic Theme](screenshot_plone6_basic.png "Plone-6 Classic Theme")
 
-Basic-Auth für alle Referenzsysteme:
-
-Benutzername: plone
-Passwort: uvc
-
-Die Plone-Referenzsysteme werden auf dem folgendem Server bei der BG-Verkehr gehostet: 10.33.204.103
-
-/home/siguv:
-
-* plone52_max = maximale Konfig (plonetheme.siguv)
-* plone52_min = minimale Konfig (plonetheme.tokyo)
-* plone52_dev = Development (plonetheme.siguv + jeweils neue Plone-Version)
-
-Ports:
-
-* 8080 = maximale Konfig (plonetheme.siguv)
-* 8090 = minimale Konfig (plonetheme.tokyo)
-* 8070 = Development (plonetheme.siguv + jeweils neue Plone-Version) 
-
-Externe URLs:
-
-* plone.bg-kooperation.de = maximale Konfig (aktuelle Referenz-Konfiguration)
-* plone-min.bg-kooperation.de = minimale Plone-Konfiguration (plonetheme.tokyo)
-* plone-dev.bg-kooperation.de = maximale Konfig + neue Plone-Version
 
 Ansprechpartner
 ---------------
 - Lars Walther (lwalther@novareto.de)
-- Lucian Dünnwald (duennwald.lucian@bgetem.de)
 - fachlich: Holger Zingsheim (BG ETEM)
 
 Maintainer
 ----------
 
 - Lars Walther (lwalther@novareto.de)
-- Lucian Dünnwald (duennwald.lucian@bgetem.de)
