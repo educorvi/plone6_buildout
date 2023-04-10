@@ -1,8 +1,8 @@
 import os
 cwd = os.getcwd()
 
-ploneversion = '5.2.9'
-zopeversion = '4.8.2'
+ploneversion = '6.0.2'
+zopeversion = '5.8'
 
 our = cwd + '/profiles/versions.cfg'
 there = cwd + f'/profiles/{ploneversion}/'
