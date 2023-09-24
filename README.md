@@ -5,7 +5,7 @@ Installationsprozedur für die Plone-6-Installationen der SIGUV-Kooperation
 Installation
 ============
 
-Aktuelles Zielsystem für Plone Version 6.0.0
+Aktuelles Zielsystem für Plone Version 6.0.7
 --------------------------------------------
 
 - Ubuntu 22.04 LTS
@@ -50,14 +50,14 @@ Anpassung der buildout.cfg nach git clone
 Buildout für eine bestimmte Plone-Version (6.0.0)
 =================================================
 
-Der Master- bzw. Main Branch des Buildouts erlaubt die Installation der jeweils aktuellen Plone6-Version für
+Der Master- bzw. Main Branch des Buildouts rlaubt die Installation der jeweils aktuellen Plone6-Version für
 ein definiertes Zielsystem (siehe oben). Für ältere Installationen (Bestand an Portalen)
 kann es aber durchaus sinnvoll sein, explizite Buildouts älterer Plone-Stable-Releases durchzuführen.
 Beginnend mit Version 6.0.0 werden versionsspezifische Kopien aller erforderlichen Dateien im Buildout
 gepflegt. Aktuell sind das folgende Dateien:
 
 * requirements.txt -> requirements-${version}.cfg
-* profiles/versions.cfg -> profiles/versions-${version}.cfg 
+* profiles/versions.cfg -> profiles/versions-${version}.cfg
 
 Abweichender Installationsablauf
 --------------------------------
@@ -77,6 +77,12 @@ extends =
     profiles/versions-${version}.cfg
 ``` 
 * ~/$projectname > ./bin/buildout
+
+Aktuelles Zielsystem für Plone Version 6.0.2
+--------------------------------------------
+
+- Ubuntu 22.04 LTS
+- Python 3.10.6
 
 Zielsysteme für Plone Version 6.0.0
 -----------------------------------
